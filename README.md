@@ -7,15 +7,15 @@ It eliminates the need for manual attendance and ensures accuracy, efficiency, a
 
 🚀 Key Features
 
-Automated Attendance — Detects and marks attendance directly from a group photo.
+✅ Automated Attendance – Detects and marks attendance directly from a group photo.
 
-Face Recognition — Uses advanced deep learning (CNN model) for high accuracy.
+🧠 Face Recognition – Uses advanced deep learning (CNN model) for high accuracy.
 
-CSV Attendance Reports — Saves attendance with timestamps for easy record keeping.
+📊 CSV Attendance Reports – Saves attendance with timestamps for easy record keeping.
 
-Visual Feedback — Generates an annotated image with recognized faces.
+🖼️ Visual Feedback – Generates an annotated image with recognized faces.
 
-Scalable — Works for multiple students or employees with simple dataset updates.
+🌐 Scalable – Works for multiple students or employees with simple dataset updates.
 
 🧩 Project Structure
 attendance_ml/
@@ -47,28 +47,30 @@ cd attendance_ml
 
 2️⃣ Create a Virtual Environment (Optional but Recommended)
 python3 -m venv venv
-source venv/bin/activate  # On Mac/Linux
-venv\Scripts\activate     # On Windows
+source venv/bin/activate      # On Mac/Linux
+venv\Scripts\activate         # On Windows
 
 3️⃣ Install Dependencies
 pip install face_recognition opencv-python numpy
 
 
-🔹 Note: You may also need to install dlib for face recognition.
-On macOS: brew install cmake before installing face_recognition.
+⚠️ Note: You may also need to install dlib for face recognition.
+On macOS, run:
+
+brew install cmake
+pip install dlib
 
 🧠 How It Works
 
-Dataset Preparation
+Prepare Dataset
 
 Create a folder named dataset/.
 
-Inside it, add one subfolder per student (e.g., supriya/, mohana/)
+Inside it, add one subfolder per student (e.g., supriya/, mohana/).
 
-Each folder should contain several clear face images of that student.
+Each folder should contain several clear face images of that person.
 
-Encode Faces
-Run the script below to generate face encodings:
+Generate Face Encodings
 
 python3 scripts/encode_faces.py
 
@@ -77,20 +79,16 @@ This creates encodings.pickle containing facial features for all students.
 
 Mark Attendance from a Group Photo
 
-Place your group image as group_photo.jpg
-
-Then run:
-
 python3 scripts/attendance_from_group.py
 
 
-The system detects faces, matches them with encodings, and marks attendance in attendance.csv.
+The script detects faces, matches them, and updates attendance.csv.
 
 View Results
 
-Open group_photo_annotated.jpg to see recognized faces with bounding boxes.
+🖼️ Open group_photo_annotated.jpg for recognized faces.
 
-Open attendance.csv to view attendance with timestamps.
+📄 Open attendance.csv for attendance with timestamps.
 
 📊 Output Example
 group_photo_annotated.jpg
@@ -104,40 +102,38 @@ Date & Time	Student Name	Status
 2025-11-11 07:37:17	Mohana	Present
 2025-11-11 07:37:17	Anusha	Absent
 2025-11-11 07:37:17	Harika	Absent
-🧠 Technologies Used
+🧰 Technologies Used
 
 Python 3
 
 OpenCV
 
-Face Recognition (based on dlib)
+face_recognition (based on dlib)
 
 NumPy
 
-Pickle (for data serialization)
+Pickle
 
 💡 Applications
 
-Educational institutions (student attendance)
+🎓 Educational institutions – student attendance tracking
 
-Corporate environments (employee tracking)
+🏢 Corporate offices – employee management
 
-Conference or event check-ins
+🎤 Conferences – event participant verification
 
-Secure access verification systems
+🔐 Security – access control systems
 
 🔒 Ethical Considerations
 
-This system is intended for educational and authorized institutional use only.
-
-Always ensure privacy, consent, and data security while storing and processing facial data.
+This project is meant for educational and authorized use only.
+Always ensure privacy, consent, and data protection when handling facial data.
 
 🧾 License
 
-This project is open source under the MIT License
-.
+This project is open source under the MIT License.
 
 👩‍💻 Author
 
 Supriya Mukkamalla
- Email: supriya1011101@gmail.com
+📧 Email: supriya1011101@gmail.com
