@@ -1,0 +1,32 @@
+cat > .gitignore <<'EOF'
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Dataset / generated files (do NOT push student photos / encodings / attendance CSV)
+dataset/
+group_photo*.jpg
+group_photo_annotated.jpg
+encodings.pickle
+attendance.csv
+
+# Logs
+*.log
+
+EOF
